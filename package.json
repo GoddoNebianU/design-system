@@ -1,0 +1,177 @@
+{
+  "name": "@lernu/design-system",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Pure presentation-layer UI primitives (Radix + CVA) shared across lernu.cc projects. Ships TypeScript source for Tailwind v4 @source scanning.",
+  "license": "MIT",
+  "exports": {
+    "./cn": {
+      "types": "./src/cn.ts",
+      "import": "./src/cn.ts"
+    },
+    "./theme-provider": {
+      "types": "./src/theme-provider.tsx",
+      "import": "./src/theme-provider.tsx"
+    },
+    "./theme-presets": {
+      "types": "./src/theme-presets.ts",
+      "import": "./src/theme-presets.ts"
+    },
+    "./themes.json": "./src/themes.json",
+    "./tokens.css": "./src/tokens.css",
+    "./accordion": {
+      "types": "./src/accordion.tsx",
+      "import": "./src/accordion.tsx"
+    },
+    "./alert": {
+      "types": "./src/alert.tsx",
+      "import": "./src/alert.tsx"
+    },
+    "./avatar": {
+      "types": "./src/avatar.tsx",
+      "import": "./src/avatar.tsx"
+    },
+    "./badge": {
+      "types": "./src/badge.tsx",
+      "import": "./src/badge.tsx"
+    },
+    "./button": {
+      "types": "./src/button.tsx",
+      "import": "./src/button.tsx"
+    },
+    "./card": {
+      "types": "./src/card.tsx",
+      "import": "./src/card.tsx"
+    },
+    "./container": {
+      "types": "./src/container.tsx",
+      "import": "./src/container.tsx"
+    },
+    "./dialog": {
+      "types": "./src/dialog.tsx",
+      "import": "./src/dialog.tsx"
+    },
+    "./dropdown-menu": {
+      "types": "./src/dropdown-menu.tsx",
+      "import": "./src/dropdown-menu.tsx"
+    },
+    "./empty-state": {
+      "types": "./src/empty-state.tsx",
+      "import": "./src/empty-state.tsx"
+    },
+    "./field": {
+      "types": "./src/field.tsx",
+      "import": "./src/field.tsx"
+    },
+    "./heading": {
+      "types": "./src/heading.tsx",
+      "import": "./src/heading.tsx"
+    },
+    "./icon-button": {
+      "types": "./src/icon-button.tsx",
+      "import": "./src/icon-button.tsx"
+    },
+    "./input": {
+      "types": "./src/input.tsx",
+      "import": "./src/input.tsx"
+    },
+    "./label": {
+      "types": "./src/label.tsx",
+      "import": "./src/label.tsx"
+    },
+    "./modal": {
+      "types": "./src/modal.tsx",
+      "import": "./src/modal.tsx"
+    },
+    "./popover": {
+      "types": "./src/popover.tsx",
+      "import": "./src/popover.tsx"
+    },
+    "./progress": {
+      "types": "./src/progress.tsx",
+      "import": "./src/progress.tsx"
+    },
+    "./range": {
+      "types": "./src/range.tsx",
+      "import": "./src/range.tsx"
+    },
+    "./scroll-area": {
+      "types": "./src/scroll-area.tsx",
+      "import": "./src/scroll-area.tsx"
+    },
+    "./select": {
+      "types": "./src/select.tsx",
+      "import": "./src/select.tsx"
+    },
+    "./separator": {
+      "types": "./src/separator.tsx",
+      "import": "./src/separator.tsx"
+    },
+    "./skeleton": {
+      "types": "./src/skeleton.tsx",
+      "import": "./src/skeleton.tsx"
+    },
+    "./spinner": {
+      "types": "./src/spinner.tsx",
+      "import": "./src/spinner.tsx"
+    },
+    "./stack": {
+      "types": "./src/stack.tsx",
+      "import": "./src/stack.tsx"
+    },
+    "./switch": {
+      "types": "./src/switch.tsx",
+      "import": "./src/switch.tsx"
+    },
+    "./table": {
+      "types": "./src/table.tsx",
+      "import": "./src/table.tsx"
+    },
+    "./tabs": {
+      "types": "./src/tabs.tsx",
+      "import": "./src/tabs.tsx"
+    },
+    "./text": {
+      "types": "./src/text.tsx",
+      "import": "./src/text.tsx"
+    },
+    "./textarea": {
+      "types": "./src/textarea.tsx",
+      "import": "./src/textarea.tsx"
+    },
+    "./tooltip": {
+      "types": "./src/tooltip.tsx",
+      "import": "./src/tooltip.tsx"
+    }
+  },
+  "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.17",
+    "@radix-ui/react-avatar": "^1.2.3",
+    "@radix-ui/react-dialog": "^1.1.20",
+    "@radix-ui/react-dropdown-menu": "^2.1.21",
+    "@radix-ui/react-label": "^2.1.12",
+    "@radix-ui/react-popover": "^1.1.20",
+    "@radix-ui/react-scroll-area": "^1.2.15",
+    "@radix-ui/react-separator": "^1.1.12",
+    "@radix-ui/react-slot": "^1.3.0",
+    "@radix-ui/react-tabs": "^1.1.18",
+    "@radix-ui/react-tooltip": "^1.2.13",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.8.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.6.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
