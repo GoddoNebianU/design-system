@@ -1,4 +1,4 @@
-# @lernu/design-system
+# @goddonebianu/design-system
 
 Pure presentation-layer UI primitives shared across [lernu.cc](https://lernu.cc) projects. Built with Radix UI + class-variance-authority + Tailwind CSS v4.
 
@@ -12,14 +12,14 @@ Ships **TypeScript source** (`.tsx` / `.ts`) — not pre-bundled ESM/CJS. This l
 
 ## Installation
 
-This package is published to [GitHub Packages](https://npm.pkg.github.com) under the `@lernu` scope.
+This package is published to [GitHub Packages](https://npm.pkg.github.com) under the `@goddonebianu` scope.
 
-### 1. Configure npm registry for the `@lernu` scope
+### 1. Configure npm registry for the `@goddonebianu` scope
 
 Create or edit `.npmrc` in your project root:
 
 ```ini
-@lernu:registry=https://npm.pkg.github.com
+@goddonebianu:registry=https://npm.pkg.github.com
 ```
 
 Authenticate by providing a GitHub Personal Access Token (PAT) with `read:packages` scope. For CI, set `NODE_AUTH_TOKEN` in the environment. For local development, add to `.npmrc`:
@@ -31,9 +31,9 @@ Authenticate by providing a GitHub Personal Access Token (PAT) with `read:packag
 ### 2. Add the dependency
 
 ```bash
-pnpm add @lernu/design-system
+pnpm add @goddonebianu/design-system
 # or
-npm install @lernu/design-system
+npm install @goddonebianu/design-system
 ```
 
 ### 3. Import tokens (Tailwind v4)
@@ -41,12 +41,12 @@ npm install @lernu/design-system
 In your main CSS file (e.g. `globals.css`), after `@import "tailwindcss"`:
 
 ```css
-@import "@lernu/design-system/tokens.css";
-@source "@lernu/design-system";
+@import "@goddonebianu/design-system/tokens.css";
+@source "@goddonebianu/design-system";
 ```
 
 - `@import ... tokens.css` injects the shared design tokens (semantic colors, spacing, radius, shadows, etc.)
-- `@source "@lernu/design-system"` tells Tailwind v4 to scan the package source for class names so they are included in the generated CSS
+- `@source "@goddonebianu/design-system"` tells Tailwind v4 to scan the package source for class names so they are included in the generated CSS
 
 ### 4. Next.js consumers — enable transpilation
 
@@ -56,7 +56,7 @@ If you use Next.js, add the package to `transpilePackages` in `next.config.ts` s
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["@lernu/design-system"],
+  transpilePackages: ["@goddonebianu/design-system"],
 };
 
 export default nextConfig;
@@ -66,13 +66,13 @@ Vite consumers need no extra configuration — Vite compiles TSX from `node_modu
 
 ## Usage
 
-Import each primitive via its explicit subpath. Do **not** use a bare `@lernu/design-system` import (barrel imports are intentionally not supported — use explicit subpaths for tree-shaking and clarity).
+Import each primitive via its explicit subpath. Do **not** use a bare `@goddonebianu/design-system` import (barrel imports are intentionally not supported — use explicit subpaths for tree-shaking and clarity).
 
 ```tsx
-import { Button } from "@lernu/design-system/button";
-import { Card } from "@lernu/design-system/card";
-import { cn } from "@lernu/design-system/cn";
-import { ThemeProvider } from "@lernu/design-system/theme-provider";
+import { Button } from "@goddonebianu/design-system/button";
+import { Card } from "@goddonebianu/design-system/card";
+import { cn } from "@goddonebianu/design-system/cn";
+import { ThemeProvider } from "@goddonebianu/design-system/theme-provider";
 ```
 
 ## Peer dependencies
