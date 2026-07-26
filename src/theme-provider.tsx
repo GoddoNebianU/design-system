@@ -1,0 +1,81 @@
+"use client";
+
+import { createContext, useContext, useEffect, useState } from "react";
+import {
+  THEME_PRESETS,
+  DEFAULT_THEME,
+  getThemePreset,
+  type ThemePreset,
+} from "./theme-presets";
+
+type ThemeContextType = {
+  currentTheme: string;
+  themePreset: ThemePreset;
+  setTheme: (themeId: string) => void;
+  availableThemes: ThemePreset[];
+};
+
+const ThemeContext = createContext<ThemeContextType | null>(null);
+
+const STORAGE_KEY = "theme-preset";
+
+function getInitialTheme(): string {
+  if (typeof window === "undefined") return DEFAULT_THEME;
+  const saved = localStorage.getItem(STORAGE_KEY);
+  return saved && getThemePreset(saved) ? saved : DEFAULT_THEME;
+}
+
+function applyThemeColors(preset: ThemePreset): void {
+  const root = document.documentElement;
+  Object.entries(preset.colors).forEach(([shade, color]) => {
+    root.style.setProperty(`--color-primary-${shade}`, color);
+  });
+}
+
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [currentTheme, setCurrentTheme] = useState<string>(DEFAULT_THEME);
+  const [hydrated, setHydrated] = useState(false);
+
+  // Mount-only hydration from localStorage. Do NOT add currentTheme to deps —
+  // it would read a stale localStorage value (persist effect runs after this
+  // one) and revert the user's color pick, causing an infinite flicker.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setCurrentTheme(getInitialTheme());
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const preset = getThemePreset(currentTheme);
+    if (preset) {
+      applyThemeColors(preset);
+      localStorage.setItem(STORAGE_KEY, currentTheme);
+    }
+  }, [currentTheme, hydrated]);
+
+  const setTheme = (themeId: string) => {
+    if (getThemePreset(themeId)) {
+      setCurrentTheme(themeId);
+    }
+  };
+
+  const themePreset = getThemePreset(currentTheme) || THEME_PRESETS[0];
+
+  const value = {
+    currentTheme,
+    themePreset,
+    setTheme,
+    availableThemes: THEME_PRESETS,
+  };
+
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
+}
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within a ThemeProvider");
+  }
+  return context;
+}
