@@ -75,10 +75,6 @@ const stackVariants = cva(
   }
 );
 
-type StackDirection = VariantProps<typeof stackVariants>["direction"];
-type StackAlign = VariantProps<typeof stackVariants>["align"];
-type StackJustify = VariantProps<typeof stackVariants>["justify"];
-
 interface StackProps
   extends React.HTMLAttributes<HTMLDivElement>, VariantProps<typeof stackVariants> {
   children: React.ReactNode;
