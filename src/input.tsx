@@ -1,5 +1,3 @@
-"use client";
-
 import React, { forwardRef } from "react";
 import { type VariantProps } from "class-variance-authority";
 import { cn } from "./cn";
@@ -35,13 +33,13 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className={cn("relative", containerClassName)}>
         {leftIcon && (
-          <div className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" aria-hidden="true">
+          <div className="pointer-events-none absolute top-1/2 left-3 -translate-y-1/2 text-foreground-disabled" aria-hidden="true">
             {leftIcon}
           </div>
         )}
         {inputEl}
         {rightIcon && (
-          <div className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400" aria-hidden="true">
+          <div className="absolute top-1/2 right-3 -translate-y-1/2 text-foreground-disabled" aria-hidden="true">
             {rightIcon}
           </div>
         )}

@@ -41,7 +41,7 @@ export function Field({ label, errorText, helperText, required, children, classN
   return (
     <div className={className}>
       {label && (
-        <label htmlFor={id} className="mb-1 block text-sm font-medium text-gray-700">
+        <label htmlFor={id} className="mb-1 block text-sm font-medium text-foreground">
           {label}
           {required && <span className="ml-0.5 text-error-500">*</span>}
         </label>

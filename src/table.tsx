@@ -17,7 +17,7 @@ export const THead = React.forwardRef<
   React.HTMLAttributes<HTMLTableSectionElement>
 >(function THead({ className, children, ...props }, ref) {
   return (
-    <thead ref={ref} className={cn("border-b-2 border-gray-200", className)} {...props}>
+    <thead ref={ref} className={cn("border-b-2 border-border-secondary", className)} {...props}>
       {children}
     </thead>
   );
@@ -35,7 +35,7 @@ export const TR = React.forwardRef<
   React.HTMLAttributes<HTMLTableRowElement>
 >(function TR({ className, children, ...props }, ref) {
   return (
-    <tr ref={ref} className={cn("border-b border-gray-100 last:border-0", className)} {...props}>
+    <tr ref={ref} className={cn("border-b border-border-secondary last:border-0", className)} {...props}>
       {children}
     </tr>
   );
@@ -46,7 +46,7 @@ export const TH = React.forwardRef<
   React.ThHTMLAttributes<HTMLTableCellElement>
 >(function TH({ className, children, ...props }, ref) {
   return (
-    <th ref={ref} className={cn("py-2 px-4 text-left font-semibold text-gray-700", className)} {...props}>
+    <th ref={ref} className={cn("py-2 px-4 text-left font-semibold text-foreground", className)} {...props}>
       {children}
     </th>
   );
@@ -57,7 +57,7 @@ export const TD = React.forwardRef<
   React.TdHTMLAttributes<HTMLTableCellElement>
 >(function TD({ className, children, ...props }, ref) {
   return (
-    <td ref={ref} className={cn("py-2 px-4 text-gray-600", className)} {...props}>
+    <td ref={ref} className={cn("py-2 px-4 text-foreground-secondary", className)} {...props}>
       {children}
     </td>
   );

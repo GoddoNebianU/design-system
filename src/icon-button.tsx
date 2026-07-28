@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Loader2 } from "lucide-react";
 import { cva, type VariantProps } from "class-variance-authority";
@@ -19,9 +17,9 @@ const iconButtonVariants = cva(
         round: "rounded-full",
       },
       tone: {
-        default: "text-gray-700 hover:bg-gray-100",
-        muted: "text-gray-400 hover:bg-gray-100 hover:text-primary-600",
-        danger: "text-gray-400 hover:bg-error-50 hover:text-error-500",
+        default: "text-foreground hover:bg-muted",
+        muted: "text-foreground-disabled hover:bg-muted hover:text-primary-600",
+        danger: "text-foreground-disabled hover:bg-error-50 hover:text-error-500",
       },
     },
     defaultVariants: {
@@ -72,7 +70,6 @@ export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(f
       ) : (
         <>
           {iconSrc && (
-            // eslint-disable-next-line @next/next/no-img-element
             <img src={iconSrc} width={size} height={size} alt={iconAlt || "icon"} className="shrink-0" />
           )}
           {icon ?? children}

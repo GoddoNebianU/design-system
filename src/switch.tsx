@@ -36,7 +36,7 @@ export const Switch = forwardRef<HTMLButtonElement, SwitchProps>(
           "transition-colors",
           focusRing,
           disabledStyles,
-          checked ? "bg-primary-500" : "bg-gray-300",
+          checked ? "bg-primary-500" : "bg-border",
           className
         )}
         {...props}

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "./cn";
@@ -19,8 +17,8 @@ const textVariants = cva("", {
       bold: "font-bold",
     },
     tone: {
-      default: "text-gray-800",
-      secondary: "text-gray-600",
+      default: "text-foreground",
+      secondary: "text-foreground-secondary",
       muted: "text-muted-foreground",
     },
     align: {

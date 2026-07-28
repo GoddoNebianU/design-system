@@ -1,6 +1,7 @@
 import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "./cn";
+import { transition } from "./_shared";
 
 /**
  * Progress 进度条组件
@@ -31,7 +32,7 @@ import { cn } from "./cn";
  */
 const progressVariants = cva(
   // 基础样式
-  "overflow-hidden rounded-full bg-gray-200 transition-all duration-250",
+  cn("overflow-hidden rounded-full bg-background-tertiary", transition),
   {
     variants: {
       size: {
@@ -106,7 +107,7 @@ export function Progress({
           </div>
         </div>
         {showLabel && (
-          <div className="ml-3 min-w-12 text-right text-sm font-medium text-gray-700">
+          <div className="ml-3 min-w-12 text-right text-sm font-medium text-foreground">
             {formatLabel()}
           </div>
         )}

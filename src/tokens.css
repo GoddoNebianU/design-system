@@ -45,6 +45,11 @@
   /* shadcn 语义色 token — @theme 的 --color-* 映射生成 bg-card/text-muted-foreground/border-border 等工具类 */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-foreground-tertiary: var(--foreground-tertiary);
+  --color-foreground-disabled: var(--foreground-disabled);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -60,6 +65,7 @@
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
   --color-border: var(--border);
+  --color-border-secondary: var(--border-secondary);
   --color-input: var(--input);
   --color-ring: var(--ring);
 

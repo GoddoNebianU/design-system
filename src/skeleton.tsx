@@ -63,7 +63,7 @@ export function Skeleton({
     <div
       role="status"
       aria-busy="true"
-      className={cn("bg-gray-200", skeletonVariants({ variant, animated }), className)}
+      className={cn("bg-background-tertiary", skeletonVariants({ variant, animated }), className)}
       {...props}
     />
   );

@@ -112,7 +112,7 @@ function Stack({
 /**
  * VStack - 垂直堆叠组件（快捷方式）
  */
-export interface VStackProps extends Omit<StackProps, "direction"> {}
+export type VStackProps = Omit<StackProps, "direction">;
 
 export function VStack(props: VStackProps) {
   return <Stack direction="column" {...props} />;
@@ -121,7 +121,7 @@ export function VStack(props: VStackProps) {
 /**
  * HStack - 水平堆叠组件（快捷方式）
  */
-export interface HStackProps extends Omit<StackProps, "direction"> {}
+export type HStackProps = Omit<StackProps, "direction">;
 
 export function HStack(props: HStackProps) {
   return <Stack direction="row" {...props} />;

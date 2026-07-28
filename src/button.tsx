@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Slot } from "@radix-ui/react-slot";
 import { Loader2 } from "lucide-react";
@@ -18,10 +16,10 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-primary-foreground hover:bg-primary-600 shadow-md",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-gray-200 shadow-sm",
+        secondary: "bg-secondary text-secondary-foreground hover:bg-muted shadow-sm",
         destructive: "bg-destructive text-destructive-foreground hover:bg-error-600 shadow-md",
         outline: "border-2 border-border bg-background hover:border-primary-500 hover:text-primary-600 shadow-none",
-        ghost: "bg-transparent text-gray-700 hover:bg-gray-100 shadow-none",
+        ghost: "bg-transparent text-foreground hover:bg-muted shadow-none",
         link: "bg-transparent text-primary-500 hover:text-primary-600 hover:underline shadow-none font-medium",
       },
       size: {
@@ -119,7 +117,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function 
   const renderImageIcon = () => {
     if (!iconSrc) return null;
     return (
-      // eslint-disable-next-line @next/next/no-img-element
       <img src={iconSrc} width={iconSize} height={iconSize} alt={iconAlt || "icon"} className="shrink-0" />
     );
   };

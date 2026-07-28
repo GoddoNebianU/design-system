@@ -11,9 +11,9 @@ const cardVariants = cva(
     variants: {
       variant: {
         default: "shadow-xl",
-        bordered: "border-2 border-gray-200 shadow-sm",
+        bordered: "border-2 border-border-secondary shadow-sm",
         elevated: "shadow-2xl",
-        flat: "border border-gray-200 shadow-none",
+        flat: "border border-border-secondary shadow-none",
       },
       padding: {
         none: "",
@@ -54,7 +54,8 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(function Card(
   const handleKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (isClickable && !disabled && (e.key === "Enter" || e.key === " ")) {
       e.preventDefault();
-      onClick?.(new MouseEvent("click", { bubbles: true }) as unknown as React.MouseEvent<HTMLDivElement>);
+      // Native click fires a real React.MouseEvent into onClick — do not regress to synthesizing a fake event.
+      e.currentTarget.click();
     }
     onKeyDown?.(e);
   };

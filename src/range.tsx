@@ -16,6 +16,7 @@
 
 import * as React from "react";
 import { cn } from "./cn";
+import { focusRing } from "./_shared";
 
 export interface RangeProps extends Omit<React.ComponentPropsWithoutRef<"input">, "onChange"> {
   /** 当前值 */
@@ -48,7 +49,7 @@ export const Range = React.forwardRef<HTMLInputElement, RangeProps>(
         disabled={disabled}
         className={cn(
           "h-2 w-full cursor-pointer appearance-none rounded-lg",
-          "focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:outline-none",
+          focusRing,
           disabled && "cursor-not-allowed opacity-50",
           className
         )}

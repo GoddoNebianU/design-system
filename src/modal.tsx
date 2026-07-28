@@ -4,6 +4,7 @@ import React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { X } from "lucide-react";
 import { cn } from "./cn";
+import { focusRing } from "./_shared";
 
 const sizeClasses = {
   sm: "max-w-md",
@@ -145,7 +146,8 @@ Modal.CloseButton = function ModalCloseButton({
     <DialogPrimitive.Close
       aria-label={ariaLabel}
       className={cn(
-        "rounded-lg p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
+        "rounded-lg p-2 text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground",
+        focusRing,
         className
       )}
       {...props}

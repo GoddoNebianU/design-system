@@ -1,5 +1,3 @@
-"use client";
-
 import React, { forwardRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { type VariantProps } from "class-variance-authority";
@@ -33,7 +31,7 @@ export const Select = forwardRef<HTMLSelectElement, SelectProps>(
           {children}
         </select>
         <div
-          className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-gray-400"
+          className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-foreground-disabled"
           aria-hidden="true"
         >
           <ChevronDown className="h-4 w-4" />

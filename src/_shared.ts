@@ -8,7 +8,7 @@ import { cva } from "class-variance-authority";
  */
 
 export const focusRing =
-  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2";
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
 
 export const disabledStyles =
   "disabled:cursor-not-allowed disabled:opacity-50";
@@ -20,15 +20,15 @@ export const transition = "transition-all duration-250";
  * 消除三个文件中的重复定义。
  */
 export const fieldVariants = cva(
-  `flex w-full rounded-md border px-3 py-2 text-base ${transition} placeholder:text-gray-400 resize-none ${focusRing} ${disabledStyles}`,
+  `flex w-full rounded-md border px-3 py-2 text-base ${transition} placeholder:text-foreground-disabled resize-none ${focusRing} ${disabledStyles}`,
   {
     variants: {
       variant: {
-        default: "border-b-2 border-gray-300 bg-transparent rounded-t-md",
-        bordered: "border-gray-300 bg-white",
-        filled: "border-transparent bg-gray-100",
-        search: "border-gray-200 bg-white pl-10 rounded-full",
-        light: "border-transparent bg-gray-100 shadow-sm hover:bg-gray-200 font-semibold cursor-pointer",
+        default: "border-b-2 border-border bg-transparent rounded-t-md",
+        bordered: "border-border bg-white",
+        filled: "border-transparent bg-muted",
+        search: "border-border-secondary bg-white pl-10 rounded-full",
+        light: "border-transparent bg-muted shadow-sm hover:bg-background-tertiary font-semibold cursor-pointer",
       },
       size: {
         sm: "h-9 px-3 text-sm",
