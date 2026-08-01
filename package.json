@@ -84,6 +84,10 @@
       "types": "./src/modal.tsx",
       "import": "./src/modal.tsx"
     },
+    "./navbar": {
+      "types": "./src/navbar.tsx",
+      "import": "./src/navbar.tsx"
+    },
     "./popover": {
       "types": "./src/popover.tsx",
       "import": "./src/popover.tsx"

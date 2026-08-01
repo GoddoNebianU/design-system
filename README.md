@@ -6,7 +6,7 @@ Ships **TypeScript source** (`.tsx` / `.ts`) — not pre-bundled ESM/CJS. This l
 
 ## Contents
 
-- **31 UI primitives**: `accordion`, `alert`, `avatar`, `badge`, `button`, `card`, `container`, `dialog`, `dropdown-menu`, `empty-state`, `field`, `heading`, `icon-button`, `input`, `label`, `modal`, `popover`, `progress`, `range`, `scroll-area`, `select`, `separator`, `skeleton`, `spinner`, `stack`, `switch`, `table`, `tabs`, `text`, `textarea`, `tooltip`
+- **32 UI primitives**: `accordion`, `alert`, `avatar`, `badge`, `button`, `card`, `container`, `dialog`, `dropdown-menu`, `empty-state`, `field`, `heading`, `icon-button`, `input`, `label`, `modal`, `navbar`, `popover`, `progress`, `range`, `scroll-area`, `select`, `separator`, `skeleton`, `spinner`, `stack`, `switch`, `table`, `tabs`, `text`, `textarea`, `tooltip`
 - **Utilities**: `cn` (clsx + tailwind-merge)
 - **Theming**: `theme-provider`, `theme-presets`, `themes.json` (14 presets), `tokens.css`
 
